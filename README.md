@@ -1,15 +1,17 @@
 # 📡 StudentSync – Smart Student Attendance Monitoring System
 
-StudentSync is a smart attendance monitoring system that automates student attendance using GPS geofencing and location-based verification. The project provides dedicated interfaces for students, parents, and administrators to improve attendance management and real-time monitoring.
+StudentSync is a smart attendance monitoring system that automates student attendance using GPS geofencing and location-based verification. The project provides dedicated interfaces for students, parents, and administrators to improve attendance management and monitoring.
+
+> **Project status:** StudentSync is a frontend prototype. It runs entirely in the browser with no backend: users, attendance records, notifications and geofence settings are saved in the browser's LocalStorage, and sign-in is checked in client-side JavaScript against demo accounts. Data is therefore not shared between devices, and the parent dashboard shows alerts generated in the same browser, not live data from a student's phone. The geofencing uses the browser Geolocation API with a configurable campus location and radius (500 m by default).
 
 ## 🚀 Features
 
 - 📍 GPS-based Geofencing for attendance verification
 - 🎓 Student Dashboard
-- 👨‍👩‍👧 Parent Dashboard with real-time alerts
+- 👨‍👩‍👧 Parent Dashboard with campus entry/exit and attendance alerts
 - ⚙️ Admin Dashboard for student and timetable management
 - 📊 Attendance Analytics
-- 🔔 Instant Notifications
+- 🔔 In-app Notifications
 - 📅 Timetable Management
 - 🔐 Role-based Login System
 - 📱 Responsive UI
@@ -25,7 +27,7 @@ StudentSync is a smart attendance monitoring system that automates student atten
 ## 📂 Project Structure
 
 ```
-StudentSync/
+studentsync/
 │── index.html
 │── about.html
 │── login.html
@@ -34,8 +36,7 @@ StudentSync/
 │── admin-dashboard.html
 │── student-dashboard.html
 │── script.js
-│── style.css
-└── assets/
+└── style.css
 ```
 
 ## 👥 User Roles
@@ -78,23 +79,21 @@ StudentSync/
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/StudentSync.git
+   git clone https://github.com/siddharthgavali11-dev/studentsync.git
+   cd studentsync
    ```
 
-2. Open the project folder.
+2. Open `index.html` in your web browser.
 
-3. Launch `index.html` in your web browser.
+No installation or build step is required.
 
-No additional installation or server setup is required.
+If your browser blocks location access when the page is opened as a file, serve the folder locally instead and open http://localhost:8000:
 
-## 📸 Screenshots
+```bash
+python -m http.server 8000
+```
 
-Add screenshots of:
-- Home Page
-- Student Dashboard
-- Parent Dashboard
-- Admin Dashboard
-- Login Page
+Sign in with one of the demo accounts above, and allow location access when the browser asks to try the geofencing.
 
 ## 🔮 Future Enhancements
 
